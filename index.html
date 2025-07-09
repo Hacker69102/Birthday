@@ -5,6 +5,25 @@
 <!--[if gt IE 8]> <html> <![endif]-->
 <!--[if !IE]><!--><html lang="en"><!-- <![endif]-->
 <head>
+	<style>
+		.side-image {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 150px; /* Adjust as needed */
+  height: auto;
+  z-index: 999; /* Make sure they appear above other elements */
+}
+
+.left-fixed {
+  left: 10px; /* Adjust spacing from left edge */
+}
+
+.right-fixed {
+  right: 10px; /* Adjust spacing from right edge */
+}
+
+	</style>
 	<title>Happy Birthday</title>
 	<meta charset="UTF-8" />
 	<meta name="description" content="Happy Birthday">
@@ -30,6 +49,10 @@
 </head>
 
 <body>
+	<!-- Left and Right Center Images -->
+	<img src="left-image.png" class="side-image left-fixed" alt="Left Image">
+	<img src="right-image.png" class="side-image right-fixed" alt="Right Image">
+
 	<div class="loading"></div>
 	<audio class="song" controls loop>
         <source src="hbd.mp3"></source>
